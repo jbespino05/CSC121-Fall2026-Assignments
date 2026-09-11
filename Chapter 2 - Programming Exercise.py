@@ -19,5 +19,6 @@ age = Current_year - Birth_year
 border = "=" * 25
 
 print(border)
-print("My name is", Name, "and I am", age, "years old."
-
+print("My name is", Name, "and I am", age, "years old.")
+print("My goal is to", Goal, ".")
+print(border) 
