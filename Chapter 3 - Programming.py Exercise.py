@@ -19,3 +19,7 @@ def print_bio(name, age, goal):
   print("*" * 25)
   
 print_bio("Jose", 20, "Become a structural engineer")
+print()
+print_bio("Keanu Reeves", 62, "Continue acting career")
+print()
+print_bio("Batman", 67, "Protect Gotham City")
