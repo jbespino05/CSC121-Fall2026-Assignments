@@ -10,3 +10,12 @@
 # 1. Call print_bio using my own info
 # 2. Call print_bio using Keanu Reeves 
 # 3. Call print_bio using Batman 
+
+def print_bio(name, age, goal):
+  print("*" * 25)
+  print("name:", name)
+  print("age:", age)
+  print("goal:", goal)
+  print("*" * 25)
+  
+print_bio("Jose", 20, "Become a structural engineer")
