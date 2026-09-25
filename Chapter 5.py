@@ -12,3 +12,11 @@
 # 2. input() for movie hour (int)
 # 3. Call calculate_ticket()
 
+def calculate_ticket(age, hour):
+  if age <= 12 or age >= 65:
+    price = 8
+  else: 
+    price = 12
+    print(price)
+
+calculate_ticket(20,19)
