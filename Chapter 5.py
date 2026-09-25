@@ -17,6 +17,11 @@ def calculate_ticket(age, hour):
     price = 8
   else: 
     price = 12
-    print(price)
+  if hour < 17:
+    price = price - 2
+print(f"Your ticket price is ${price:.2f}")
 
-calculate_ticket(20,19)
+age = int(input("Enter age:")
+hour = int(input("Enter movie hour (0-23):"))
+
+calculate_ticket(age, hour)
