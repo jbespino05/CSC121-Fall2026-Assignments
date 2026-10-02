@@ -13,6 +13,9 @@ def circumference(radius):
 # 3. Define volume(radius, height): 
 #    - Call area(radius) and multiply by height.
 #    - Return the result.
+def volume(radius, height):
+  base_area = area(radius)
+  return base_area * height
 
 # PROGRAM LOGIC
 # 1. Input for radius (float)
