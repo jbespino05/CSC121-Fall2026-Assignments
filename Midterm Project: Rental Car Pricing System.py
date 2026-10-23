@@ -4,10 +4,29 @@
 # FUNCTION DEFINITIONS
 
 # Function 1: Get the car type and its daily cost
+def get_car_info(car_type):
+  if car_type == "B":
+    return "Budget", 40
+  elif car_type == "S":
+    return "Standard", 60
+  elif car_type == "L":
+    return "Luxury", 80
+else:
+  return None, 0
 # Input: B, S, or L
 # Output: Name and daily cost of the car
 
 # Function 2: Calculate mileage
+def calculate_miles(start_miles, end_miles):
+    total_miles = end_miles - start_miles
+
+    if total_miles > 100:
+        charged_miles = total_miles - 100
+    else:
+        charged_miles = 0
+
+    return total_miles, charged_miles
+  
 # Input: Starting and ending odometer readings
 # Output: Total miles and miles charges
 
@@ -16,6 +35,18 @@
 # Output: Total bill 
 
 # PROGRAM LOGIC
+car_type = input("Enter classification code (B, S, L): ").upper()
+
+while car_type not in ("B", "S", "L"):
+  print("Invalid classification. Please try again.")
+  car_type = input("Enter classification code (B, S, L): ").upper()
+car_name, daily_rate = get_car_info(car_type)
+start_miles = int(input("Start odometer: "))
+end_miles = int(input("End odometer: "))
+
+total_miles, charged_miles = calculate_miles(start_miles, end_miles)
+days_rented = int(input("Days Rented: "))
+
 # Ask user for car type (B, S, or L)
 # Check if the car type is valid
 # If invalid, ask the user to enter it again
@@ -31,3 +62,4 @@
 # Show total miles driven
 # Show miles charged
 # Show final bill amount
+
