@@ -11,8 +11,8 @@ def get_car_info(car_type):
     return "Standard", 60
   elif car_type == "L":
     return "Luxury", 80
-else:
-  return None, 0
+  else:
+    return None, 0
 # Input: B, S, or L
 # Output: Name and daily cost of the car
 
