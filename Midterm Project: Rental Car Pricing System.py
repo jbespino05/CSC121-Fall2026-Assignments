@@ -31,6 +31,12 @@ def calculate_miles(start_miles, end_miles):
 # Output: Total miles and miles charges
 
 # Function 3: Calculate the rental bill
+def calculate_bill(daily_rate, days_rented, charged_miles):
+  rental_cost = daily_rate * days_rented
+  mileage_cost = charged_miles * 0.35
+
+  total_bill = rental_cost + mileage_cost
+  return total_bill
 # Input: Daily cost, days rented, and miles charged 
 # Output: Total bill 
 
@@ -46,6 +52,15 @@ end_miles = int(input("End odometer: "))
 
 total_miles, charged_miles = calculate_miles(start_miles, end_miles)
 days_rented = int(input("Days Rented: "))
+total_bill = calculate_bill(daily_rate, days_rented, charged_miles)
+
+# Show the final rental summary
+print()
+print("---RENTAL SUMMARY--")
+print("Classification:", car_name)
+print("Total Miles:", total_miles)
+print("Charged Miles:", charged_miles)
+print(f"Total Bill: ${total_bill:.2f}")
 
 # Ask user for car type (B, S, or L)
 # Check if the car type is valid
