@@ -15,5 +15,13 @@ def calculate_rectangle(length, width):
   return (area, perimeter)
 
 # PROGRAM LOGIC
-# Test the function using a length of 5 and width of 10
-print(calculate_rectangle(5,10))
+# Ask the user to enter the length of the rectangle
+length = float(input("Enter length: "))
+# Ask the user to enter the width of the rectangle
+width = float(input("Enter width: "))
+# Call the function and unpack the returned tuple
+my_area, my_perimeter = calculate_rectangle(length, width)
+# Show the calculated area and perimeter 
+print("--- Results ---")
+print("The Area is:", my_area)
+print("The perimeter is:", my_perimeter)
