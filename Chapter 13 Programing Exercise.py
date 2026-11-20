@@ -15,12 +15,21 @@ def write_entry(filename, entry):
   file.close()
 
 # Create a function called read_journal
-# Accept a filename as a parameter
-# Open the file in read mode
-# Read and display the journal entries
-# Close the file
-# Handle the error if the file does not exist
+def read_journal(filename):
 
+# Open the file in read mode
+  try:
+    file = open(filename, "r")
+# Read file
+    entries = file.read()
+# Close the file
+    file.close()
+# Show the saved journal entries
+    print("--- Your Journal ---")
+    print(entries)
+# Handle the error if the file does not exist
+  except FileNotFoundError:
+    print("No journal entries found.")
 # PROGRAM LOGIC
 
 # Set the filename to journal.txt
@@ -42,7 +51,8 @@ while True:
 
 # If the user chooses R, call read_journal
 elif choice == "R":
-  print("Reading journal will be added next.")
+# Call
+  
   
 # If the user chooses Q or types quit, end the loop
 elif choice == "Q" or choice == "QUIT":
